@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+body,
+html,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}

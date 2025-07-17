@@ -1,0 +1,9 @@
+$metal: #2b303a;
+$metal-dark: #111317;
+$metal-middle: #7a818e;
+$metal-light: #e9edf4;
+$white: #fff;
+
+$gradient-metal: linear-gradient(90deg, var($metal) 0%, #3f4756 100%);
+$gradient-metal-light: linear-gradient(90deg, #d3dae8 0%, #a7b7d8 100%);
+$gradient-accent: linear-gradient(90deg, #911812 0%, #e1261c 100%);

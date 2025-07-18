@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+body,
+html,
+h1,
+h2,
+h4 {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+body,
+html,
+h1,
+h2,
+h4,
+button,
+input,
+p,
+ul,
+label {
+  font-family: "Sora", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

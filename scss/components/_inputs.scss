@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as *;
+
+.calculator {
+  //INPUT FIELDS
+
+  &__input-field {
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.3125rem;
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  &__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: double 0.125rem transparent;
+    border-radius: 0.25rem;
+    background-image: linear-gradient(white, white), $gradient-metal-light;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.5rem 3rem 0.5rem 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+  }
+
+  &__input-unit {
+    position: absolute;
+    right: 0.625rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $metal-dark;
+  }
+
+  //CHECKBOX
+  &__checkbox-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__checkbox-custom {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid transparent;
+    background-image: linear-gradient(white, white), $gradient-metal-light;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  }
+
+  &__checkbox-input:checked + .calculator__checkbox-custom::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0.625rem;
+    background: url("../assets/icons/check.svg") no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    left: 56%;
+    top: 50%;
+  }
+}

@@ -1,0 +1,12 @@
+@use "./abstracts/variables" as *;
+@use "./base/reset";
+@use "./components/headings";
+@use "./components/buttons";
+@use "./components/inputs";
+@use "./pages/calculator";
+
+body {
+  background: $gradient-metal;
+  color: $white;
+  font-weight: 400;
+}

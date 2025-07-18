@@ -61,7 +61,16 @@
         </section>
         <section class="calculator" id="calculator">
           <h4>Compensation Calculator</h4>
-          <form class="calculator__form" id="calculator-form" novalidate>
+          <form
+            class="calculator__form"
+            id="calculator-form"
+            novalidate
+            aria-describedby="calculator-desc"
+          >
+            <p id="calculator-desc" class="visually-hidden">
+              Enter your average income and days on sick-leave to calculate
+              compensation.
+            </p>
             <div class="calculator__input-field">
               <label class="calculator__label" for="income">
                 Average income
@@ -76,9 +85,13 @@
                   required
                   inputmode="numeric"
                   aria-required="true"
+                  aria-describedby="income-desc"
                 />
                 <span class="calculator__input-unit">€</span>
               </div>
+              <p id="income-desc" class="visually-hidden">
+                Please enter your gross monthly income in euros.
+              </p>
             </div>
             <div class="calculator__input-field">
               <label class="calculator__label" for="days">
@@ -94,10 +107,15 @@
                   required
                   inputmode="numeric"
                   aria-required="true"
-                  n
+                  aria-describedby="days-desc"
                 />
-                <span class="calculator__input-unit">days</span>
+                <span class="calculator__input-unit" aria-hidden="true">
+                  days
+                </span>
               </div>
+              <p id="days-desc" class="visually-hidden">
+                Please enter the total number of sick-leave days.
+              </p>
             </div>
             <label class="calculator__checkbox-label">
               <input
@@ -111,7 +129,7 @@
             </label>
             <button type="submit" class="calculator__button">Calculate</button>
           </form>
-          <div class="calculator__results">
+          <div class="calculator__results" aria-live="polite">
             <div class="calculator__results-inner">
               <div class="compensation employer">
                 <span class="compensation__label">
@@ -137,7 +155,7 @@
               </div>
             </div>
           </div>
-          <div class="calculator__total">
+          <div class="calculator__total" aria-live="polite">
             <div class="calculator__total-label">
               Compensation total for
               <span class="calculator__total-days"> 0 days </span>

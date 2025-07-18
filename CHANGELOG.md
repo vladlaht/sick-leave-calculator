@@ -1,3 +1,9 @@
+## [1.3.0]
+
+### Added
+
+- Improved accessibility experience
+
 ## [1.2.0]
 
 ### Added

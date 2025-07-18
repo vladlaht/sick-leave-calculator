@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const getMaxDays = (hasTuberculosis) => (hasTuberculosis ? 240 : 182);
 
   const formatCurrency = (value) =>
-    value.toLocaleString("en-EN", { minimumFractionDigits: 2 }) + "€";
+    value.toLocaleString("et-EE", { minimumFractionDigits: 2 }) + "€";
 
   const checkPluralization = (value) => `${value} day${value !== 1 ? "s" : ""}`;
 

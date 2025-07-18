@@ -1,3 +1,9 @@
+## [1.3.1]
+
+### Changed
+
+- Currency formatting to use commas as decimal separator
+
 ## [1.3.0]
 
 ### Added

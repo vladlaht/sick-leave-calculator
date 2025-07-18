@@ -59,9 +59,9 @@
             <li>Parturient Bibendum</li>
           </ul>
         </section>
-        <section class="calculator calculator--cut-corners">
+        <section class="calculator" id="calculator">
           <h4>Compensation Calculator</h4>
-          <form class="calculator__form" id="sick-leave-form" novalidate>
+          <form class="calculator__form" id="calculator-form" novalidate>
             <div class="calculator__input-field">
               <label class="calculator__label" for="income">
                 Average income
@@ -74,6 +74,7 @@
                   name="income"
                   min="0"
                   required
+                  inputmode="numeric"
                   aria-required="true"
                 />
                 <span class="calculator__input-unit">€</span>
@@ -91,7 +92,9 @@
                   name="days"
                   min="1"
                   required
+                  inputmode="numeric"
                   aria-required="true"
+                  n
                 />
                 <span class="calculator__input-unit">days</span>
               </div>
@@ -114,33 +117,33 @@
                 <span class="compensation__label">
                   The employer compensates
                 </span>
-                <span class="compensation__days">4 days</span>
-                <span class="compensation__value">112,00€</span>
+                <span class="compensation__days days">0 days</span>
+                <span class="compensation__value value">0.00€</span>
                 <span class="compensation__allowance-label">
                   Daily allowance
                 </span>
-                <span class="compensation__allowance-value"> 28,00€ </span>
+                <span class="compensation__allowance-value"> 0.00€ </span>
               </div>
-              <div class="compensation health-insurance">
+              <div class="compensation insurance">
                 <span class="compensation__label">
                   Health Insurance compensates
                 </span>
-                <span class="compensation__days"> 0 days </span>
-                <span class="compensation__value"> 0,00€ </span>
+                <span class="compensation__days days"> 0 days </span>
+                <span class="compensation__value value"> 0.00€ </span>
                 <span class="compensation__allowance-label">
                   Daily allowance
                 </span>
-                <span class="compensation__allowance-value"> 28,00€ </span>
+                <span class="compensation__allowance-value"> 0.00€ </span>
               </div>
             </div>
           </div>
           <div class="calculator__total">
             <div class="calculator__total-label">
               Compensation total for
-              <span class="calculator__total-days"> 7 days </span>
+              <span class="calculator__total-days"> 0 days </span>
               (net)
             </div>
-            <span class="calculator__total-compensation">112,00€</span>
+            <span class="calculator__total-compensation">0.00€</span>
           </div>
         </section>
       </div>

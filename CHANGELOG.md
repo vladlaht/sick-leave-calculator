@@ -1,3 +1,9 @@
+## [1.2.0]
+
+### Added
+
+- Calculator functionality
+
 ## [1.1.0]
 
 ### Added

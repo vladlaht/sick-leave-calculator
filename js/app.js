@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".calculator__total-compensation"
   );
 
-  const isValidNumber = (value) =>
-    typeof value === "number" && !isNaN(value) && isFinite(value) && value > 0;
+  const sanitizeNumber = (value) => Number(value.replace(/[^0-9.]/g, ""));
 
   const getMaxDays = (hasTuberculosis) => (hasTuberculosis ? 240 : 182);
 
@@ -35,23 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const hasTuberculosis = tuberculosisCheckbox.checked;
     const maxDaysAllowed = getMaxDays(hasTuberculosis);
-    const income = parseFloat(incomeInput.value);
-    const days = parseInt(daysInput.value, 10);
-
-    if (!isValidNumber(income) || !isValidNumber(days) || days % 1 !== 0) {
-      alert("Please enter valid positive numbers.");
-      return;
-    }
-
-    const compensatedDays = Math.min(days, maxDaysAllowed);
-    const dailyAllowance = +((income * 0.7) / 30).toFixed(2);
+    const income = parseFloat(sanitizeNumber(incomeInput.value));
+    const days = parseInt(sanitizeNumber(daysInput.value, 10));
 
     //Get compensated days
+    const compensatedDays = Math.min(days, maxDaysAllowed);
     const employerDays = Math.max(0, Math.min(compensatedDays, 8) - 3);
     const insuranceDays = Math.max(0, compensatedDays - 8);
     const totalCompensationDays = employerDays + insuranceDays;
 
     //Count the values of compensation
+    const dailyAllowance = +((income * 0.7) / 30).toFixed(2);
     const employerSum = +(employerDays * dailyAllowance).toFixed(2);
     const insuranceSum = +(insuranceDays * dailyAllowance).toFixed(2);
     const totalCompensation = +(employerSum + insuranceSum).toFixed(2);

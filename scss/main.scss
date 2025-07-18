@@ -22,3 +22,10 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+.overflow-ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}

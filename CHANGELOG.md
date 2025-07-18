@@ -1,3 +1,11 @@
+## [1.3.2]
+
+### Added
+
+- Ellipsis for displaying very large numbers to prevent layout breaking
+- Validation to prevent exponential (`e`) notation in numeric inputs
+- Link to GitHub Pages for live demo
+
 ## [1.3.1]
 
 ### Changed
